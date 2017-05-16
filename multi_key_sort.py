@@ -53,3 +53,12 @@ sorted_list = sort_with_multiple_keys(list_to_sort, sort_rules=sort_rules)
 print(str(sorted_list))
 
 
+sort_rules = [
+    ("hogehoge", "asc"),
+    ("age", "asc"),
+]
+sorted_list = sort_with_multiple_keys(list_to_sort, sort_rules=sort_rules)
+
+print(str(sorted_list))
+
+
