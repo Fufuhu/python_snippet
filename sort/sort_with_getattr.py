@@ -16,7 +16,6 @@ def sort(objs, sort_rule=("value1", "asc")):
     ソート用の関数
     """
     key, order = sort_rule
-    print(key)
 
     is_reverse = (order.lower() != "asc")
     if hasattr(objs[0], key):
@@ -38,8 +37,11 @@ sorted_targets = sort(objs=targets)
 for obj in sorted_targets:
     print(obj)
 
-# value2をキーにして並び替え
-sorted_targets = sort(objs=targets, sort_rule=("value2", "asc"))
+print("========")
+
+# value2をキーにして、降順で並び替え
+# dscを指定しているけれども、実際にはasc以外ならなんでも良い
+sorted_targets = sort(objs=targets, sort_rule=("value2", "dsc"))
 
 for obj in sorted_targets:
     print(obj)
